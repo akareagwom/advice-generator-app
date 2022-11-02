@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="stylesheet" href="../public/styles.css">
+
   
   <title>Frontend Mentor | Advice generator app</title>
 
@@ -19,20 +19,24 @@
 <body>
 <main class="bg-slate-900 fixed w-full h-screen m-0 text-white">
   <!-- advicecontainer -->
-  <div id="advice-container" class="bg-slate-700 justify-center text-center items-center w-5/12 p-10 ml-96 mt-40 rounded-2xl h-80">
-    <p class="">
+  <div id="advice-container" class="bg-slate-700  justify-center text-center items-center w-5/12 p-10 ml-96 mt-40 rounded-2xl h-80">
+    <p class="text-green-800">
       Advice # <span id="advice-number"></span><!-- Advice ID goes here -->
     </p>
-    <p class="advice-text">
+    <h1 class="text-green-800">hi</h1>
+    <p class="text-6xl" id="advice-text">
       Loading...
     </p>
     <!-- divider -->
     <div class="">
-      <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
+      <img src="../images/pattern-divider-desktop.svg" alt="" srcset="">
+      <!-- <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg> -->
     </div>
     
       <div class="bg-green-400 w-12 text-center ml-52 ">
-        <button class="p-4" id="dice"><svg class="center" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="#202733"/></svg></button>
+        <button class="p-4" id="dice">
+          <img src="../images/icon-dice.svg" alt="" srcset="">
+        </button>
       </div>
     
   </div>
@@ -40,11 +44,12 @@
 </main>
   
 
-  "<!-- Advice text goes here -->"
+  
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">AKARE AZIKANG AGWOM</a>.
   </div> -->
+  <script src="script.js"></script>
 </body>
 </html>

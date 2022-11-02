@@ -1,26 +1,33 @@
-// Variables
+
+
 const dice = document.getElementById("dice");
-const adviceNum = document.getElementById("advice-number");
-const adviceText = document.querySelector("advice-text");
 
-// Run the showQuote function when the page is loaded
-window.onload = showQuote;
 
-// Eventlistener for dice button
-dice.addEventListener("click", function(){
-    showQuote();
-});
+const fetchAdvice = async ()=>{
+    const res = await fetch('https://api.adviceslip.com/advice')
+    const data = await res.json()
 
-// showQuote function to show random quote from API
-function showQuote(){
-    fetch("https://api.adviceslip.com/advice")
-    .then(response => response.json())
-    .then((data) => data.slip)
-    .then((data) => {
-        adviceNum.textContent = data.id;
-        adviceText.textContent = data.advice;
-    })
-    .catch((error) => {
-        alert(`Error ${error}`);
-    });
+    console.log(data);
+    document.getElementById("advice-number").innerHTML = data.slip.id;
+    document.getElementById("advice-text").innerHTML = data.slip.advice;
 }
+
+fetchAdvice();
+
+dice.addEventListener('click',fetchAdvice);
+
+// const dice = document.querySelector('.dice');
+// const idNumber = document.querySelector('.advice-id-number');
+// const quotes = document.querySelector('.advice-text');
+
+// const getAdvice = async () => {
+//     try {
+//         const result = await axios.get('https://api.adviceslip.com/advice');
+//         quotes.innerText = result.data.slip.advice;
+//         idNumber.innerText = result.data.slip.id;
+//     } catch (error) {
+//         console.log('ERROR', error);
+//     }
+// }
+
+// dice.addEventListener('click', getAdvice);
