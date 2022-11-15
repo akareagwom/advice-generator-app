@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
   <link rel="stylesheet" href="../public/styles.css">
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   
   <title>Frontend Mentor | Advice generator app</title>
@@ -18,27 +19,32 @@
   </style>
 </head>
 <body>
-<main class="bg-slate-900 fixed w-full h-screen m-0 text-white">
+<main class="bg-slate-900 fixed w-100 sm:w-full h-screen sm:text-xs m-0 flex-wrap  text-white">
   <!-- advicecontainer -->
-  <div id="advice-container" class="bg-slate-700  justify-center text-center items-center w-5/12 p-10 ml-96 mt-40 rounded-2xl h-80">
-    <p class="text-green-400">
-      Advice # <span id="advice-number"></span><!-- Advice ID goes here -->
-    </p>
-    <p class="text-3xl" id="advice-text">
-      Loading...
-    </p>
-    <!-- divider -->
-    <div class="">
-      <img src="../images/pattern-divider-desktop.svg" alt="" srcset="">
-      <!-- <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg> -->
-    </div>
-    
-      <div class="bg-green-400 w-12 text-center ml-52 ">
-        <button class="p-4 rounded" id="dice">
-          <img src="../images/icon-dice.svg" alt="" srcset="">
-        </button>
+  <section class="p-14 w- content-center justify-center items-center text-center flex">
+    <div id="advice-container" class="bg-slate-700 mt-20 sm:justify-center w-92 sm:w-92  justify-center text-center items-center w-5/12 p-10 content-center   sm:mt-40 rounded-2xl h-92">
+      <p class="text-green-400">
+        Advice # <span id="advice-number"></span><!-- Advice ID goes here -->
+      </p>
+      <p class="text-3xl" id="advice-text">
+        Loading...
+      </p>
+      <!-- divider -->
+      <div class="items-center justify-center text-center content-center ">
+        <img src="../images/pattern-divider-desktop.svg" alt="" srcset="">
       </div>
-    
+      
+        <div class="bg-green-400 flex mt-44 pt-14 text-center w-5 sm:w-12 ml-92 sm:fixed sm:ml-48 justify-center items-center rounded-circle  ">
+          <button class="p-4  text-center justify-center items-center  " id="dice">
+            <img src="../images/icon-dice.svg" alt="" srcset="">
+          </button>
+        </div>
+      
+    </div>
+  </section>
+   <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">AKARE AZIKANG AGWOM</a>.
   </div>
 
 </main>
@@ -46,10 +52,7 @@
 
   
   
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">AKARE AZIKANG AGWOM</a>.
-  </div> -->
+ 
   <script src="script.js"></script>
 </body>
 </html>
