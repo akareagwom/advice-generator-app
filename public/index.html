@@ -14,35 +14,44 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+      .glow-on-hover {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 10px #81f481; /* Replace with your desired glow color */
+        }
   </style>
 </head>
 <body>
 <main class="bg-slate-900 fixed w-100 sm:w-full h-screen sm:text-xs m-0 flex-wrap  text-white">
   <!-- advicecontainer -->
-  <section class="p-14 w- content-center justify-center items-center text-center flex">
-    <div id="advice-container" class="bg-slate-700 mt-20 sm:justify-center w-11/12 sm:w-2/4  justify-center text-center items-center  p-10 content-center   sm:mt-40 rounded-2xl h-92">
-      <p class="text-green-400">
-        Advice # <span id="advice-number"></span><!-- Advice ID goes here -->
-      </p>
-      <p class="text-3xl" id="advice-text">
-        Loading...
-      </p>
-      <!-- divider -->
-      <div class="ml-10 ">
-        <img src="./images/pattern-divider-desktop.svg" alt="" srcset="">
+  <section class=" relative content-center justify-center items-center text-center flex">
+    <div id="advice-container" class="bg-slate-700 mt-[100px]  sm:justify-center w-[300px] sm:w-2/4 flex flex-col justify-center text-center items-center  p-10 content-center   sm:mt-40 rounded-[10px] h-92">
+      <div class="">
+        <p class="text-green-400">
+          Advice # <span id="advice-number"></span><!-- Advice ID goes here -->
+        </p>
+        <p class="sm:text-3xl text-[14px]" id="advice-text">
+          Loading...
+        </p>
       </div>
-      
-        <div class="bg-green-400  mt-8 sm:mt-4  w-5 sm:w-12 ml-32 sm:fixed sm:ml-60  rounded-circle  ">
-          <button class="p-2 sm:p-4   " id="dice">
-            <img class="w-4 sm:w-4" src="./images/icon-dice.svg" alt="" srcset="">
-          </button>
+      <!-- divider -->
+      <div class="mt-2">
+        <div class=" ">
+          <img src="./images/pattern-divider-desktop.svg" alt="" srcset="">
         </div>
+        
+          <div class="bg-green-400 hover:bg-green-400 glow-on-hover mt-8 sm:mt-4 absolute ml-[30%] sm:ml-[14.5%]  sm:fixed  w-[25px] sm:w-[50px]  rounded-circle  ">
+            <button class=" sm:p-4 p-[6px]    " id="dice">
+              <img class="w-4 sm:w-4" src="./images/icon-dice.svg" alt="" srcset="">
+            </button>
+          </div>
+      </div>
       
     </div>
   </section>
-   <div class="attribution">
+   <div class="text-center mt-[30px]">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/akareagwom/advice-generator-app">AKARE AZIKANG AGWOM</a>.
   </div>
